@@ -5,46 +5,46 @@
  */
 
 public class TrafficLight {
+	// traffic Light Controller class
 	
+	private boolean red; // color red
+	private boolean green; // color green
+	private boolean yellow; // color yellow 
 	
-	private boolean red;
-	private boolean green;
-	private boolean yellow;
-	
-	private static final String Reset = "\033[0m";
+	private static final String Reset = "\033[0m"; // actually displays the colors
 	private static final String Red = "\033[31;7m";
 	private static final String Green = "\033[32;7m";
 	private static final String Yellow = "\033[33;7m";
 	
-public TrafficLight() {
+public TrafficLight() { 
 	this.green = false; 
 	this.yellow = false;
 	this.red = true;
 }
 
-public boolean isRed() {
+public boolean isRed() { // sets isRed to the color red
 	return red;
 }
 
-public void setRedWhen() {
+public void setRedWhen() { // sets the traffic light only red
 	this.green = false;
 	this.yellow = false;
 	this.red = true; 
 
 	}
-public boolean isYellow() {
+public boolean isYellow() { // sets isYellow to the color Yellow
 	return yellow;
 	}
-public void setYellowWhen () {
+public void setYellowWhen () { // sets traffic light to only red
 	this.green = false;
 	this.yellow= true;
 	this.red = false; 
 	}
 
-public boolean isGreen() {
+public boolean isGreen() { // assigns isGreen to the color green
 	return green;
 	}
-public void setGreenWhen() {
+public void setGreenWhen() { // sets traffic light to only green
 	this.green = true;
 	this.yellow = false;
 	this.red = false;

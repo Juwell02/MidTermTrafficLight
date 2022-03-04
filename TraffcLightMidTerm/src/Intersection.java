@@ -9,9 +9,12 @@ public class Intersection {
 	private TrafficLight eastIntersection;
 	private TrafficLight westIntersection;
 	
+	
+	// the intetsections class
 	public Intersection() {
 		name = null;
 		
+		// assigning names to each traffic light
 		northIntersection = new TrafficLight();
 		southIntersection = new TrafficLight();
 		eastIntersection = new TrafficLight();
@@ -19,12 +22,12 @@ public class Intersection {
 		
 	}
 	
-	
+	// public class for the intersections 
 public Intersection(String name) {
 	this();
 	this.name = name;
 }
-
+// switches the traffic lights
 public void switchTraffic() {
 	if(northIntersection.isGreen() == true) {
 		northIntersection.setYellowWhen();
@@ -54,7 +57,7 @@ public void switchTraffic() {
 		westIntersection.setGreenWhen();
 	}
 }
-
+// turns all the traffic lights to red
 public void stopTraffic() {
 	northIntersection.setRedWhen();
 	southIntersection.setRedWhen();
@@ -62,7 +65,7 @@ public void stopTraffic() {
 	westIntersection.setRedWhen();
 	
 }
-
+// displays what lights are what colors
 public void displayLight() {
 	System.out.println(name);
 	System.out.print("North Intersection is ");
@@ -79,5 +82,5 @@ public void displayLight() {
 
 	
 	
-}
+} // of of Intersection 
 
