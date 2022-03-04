@@ -38,7 +38,7 @@ public boolean isYellow() {
 public void setYellowWhen () {
 	this.green = false;
 	this.yellow= true;
-	this.red = true; 
+	this.red = false; 
 	}
 
 public boolean isGreen() {

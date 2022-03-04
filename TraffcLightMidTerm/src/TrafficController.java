@@ -21,7 +21,7 @@ public class TrafficController {
 	
 	private void stopAll() {
 		firstIntersection.stopTraffic();
-		secondIntersection.switchTraffic();
+		secondIntersection.stopTraffic();
 	}
 	
 	private void DisplayAll() {
@@ -37,7 +37,7 @@ public class TrafficController {
 		System.out.println(doubleLine);
 		System.out.println("0 = exit");
 		System.out.println("1 = Switch");
-		System.out.println("2 = Shutdown");
+		System.out.println("2 = Shutdown all lights");
 		return Input.getIntRange("Menu Choice: ",0, 2);
 		
 	}
