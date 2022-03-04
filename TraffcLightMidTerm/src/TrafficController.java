@@ -25,9 +25,9 @@ public class TrafficController {
 	}
 	
 	private void DisplayAll() {
-		firstIntersection.displayLights();
+		firstIntersection.displayLight();
 		System.out.println();
-		secondIntersection.displayLights();
+		secondIntersection.displayLight();
 		
 	}
 	
@@ -78,12 +78,7 @@ public class TrafficController {
 		app.ControlTraffic();
 		Input.sc.close();
 		
-	light1.setYellowWhen();
-	light1.displayLight();
-	light1.setGreenWhen();
-	light1.displayLight();
-	light1.setRedWhen();
-	light1.displayRed();
+	
 	
 		
 	}

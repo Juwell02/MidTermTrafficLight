@@ -44,7 +44,7 @@ public void setYellowWhen () {
 public boolean isGreen() {
 	return green;
 	}
-public void SetGreenWhen() {
+public void setGreenWhen() {
 	this.green = true;
 	this.yellow = false;
 	this.red = false;
