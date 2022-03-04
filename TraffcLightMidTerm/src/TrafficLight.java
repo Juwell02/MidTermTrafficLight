@@ -51,7 +51,7 @@ public void setGreenWhen() { // sets traffic light to only green
 	}
 
 
-public void showLight() {
+public void showLight() { // displays the lights colors
 	if(red)
 		System.out.println(Red + "Red" + Reset);
 	else if (yellow)
@@ -64,4 +64,4 @@ public void showLight() {
 }
 
 
-}
+} // end of TraffifLight
