@@ -3,37 +3,42 @@ public class TrafficController {
 
 	// sets double line to "="
 	private final static String doubleLine = "======================";
-	private final static String singline  =   "----------------------"; 
+	private final static String singleine  =   "----------------------"; 
 	// sets single line to "-"
 
 	// names the intersections
-	private Intersection firstIntersection; 
-	private Intersection secondIntersection; 
-	
+	private Intersection intersection1; 
+	private Intersection intersection2; 
+
 	// distinguishes the two different intersections as first and second
 	public TrafficController() {
-		firstIntersection = new Intersection("first");
-		secondIntersection = new Intersection("second");
-			
+		intersection1 = new Intersection("Doge");
+		intersection2 = new Intersection("Hansen");
+		
 	}
+	
 	// switches switch a
 	private void SwitchAll() {
-		firstIntersection.switchTraffic();
-		secondIntersection.switchTraffic();
+		intersection1.switchTraffic();
+		intersection2.switchTraffic();
 		
 	}
+	
 	// stops switch a
-	private void stopAll() {
-		firstIntersection.stopTraffic();
-		secondIntersection.stopTraffic();
-	}
-	// displays the switch
-	private void DisplayAll() {
-		firstIntersection.displayLight();
-		System.out.println();
-		secondIntersection.displayLight();
+	private void stopAllLights() {
+		intersection1.stopTraffic();
+		intersection2.stopTraffic();
 		
 	}
+	
+	// displays the switch
+	private void displayAll() {
+		intersection1.displayLight();
+		System.out.println();
+		intersection2.displayLight();
+		
+	}
+	
 	// displays the menu with the 3 choices for users
 	private int getMenuChoices() {
 		System.out.println(doubleLine);
@@ -44,52 +49,48 @@ public class TrafficController {
 		System.out.println("2 = Shutdown all lights");
 		return Input.getIntRange("Menu Choice: ",0, 2);
 		// returns the users selection
-		
+	
 	}
-	//  
+	
 	private void ControlTraffic() {
-		
-		// options while simulation is in play
-		boolean playGame = true; // while simulation is being played
-		int userInput = 4;
-		
-		while(userInput != 0) { // continues running the gams as longer as input isn't zero
+
+		int userInput = -1;
+
+		while(userInput != 0) { // continues running the game as longer as input isn't zero
 			userInput = getMenuChoices();
 			switch (userInput) {
 			case 0: // ends the simulation
 				System.out.println("Traffic Control Simulation Ended");
 				break; 
-			case 1:// switches all the lights
-			SwitchAll(); 
-			System.out.println();
-			DisplayAll();
-			break;
-			
+			case 1://switches all the lights
+				SwitchAll(); 
+				System.out.println();
+				displayAll();
+				break;
+
 			case 2:
-			stopAll(); // stops all the lights 
-			System.out.println();
-			DisplayAll();
-			break;
-			
+				stopAllLights(); // stops all the lights 
+				System.out.println();
+				displayAll();
+				break;
+
 			default:
-			System.out.println("How did you get here?");
-		
-			
-			
+				System.out.println("Invalid Input please enter a valid number");
+
 			}
 		}
 	}
-	
+
 	//runs everything through the main
 	public static void main(String[] args) {
 		TrafficController app = new TrafficController();
 		app.ControlTraffic();
 		Input.sc.close();
 
-		
-	
-	
-		
+
+
+
+
 	}
 }
 // end of main
