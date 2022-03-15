@@ -1,9 +1,16 @@
+/**
+ * Controls the traffic lights as a whole
+ * 
+ * @author juwell01
+ * @since 2022.03.14
+ * @version 1.0 
+ */
 
 public class TrafficController {
 
 	// sets double line to "="
 	private final static String doubleLine = "======================";
-	private final static String singleine  =   "----------------------"; 
+	private final static String singleline  =   "----------------------"; 
 	// sets single line to "-"
 
 	// names the intersections

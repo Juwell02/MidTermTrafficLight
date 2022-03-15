@@ -1,9 +1,10 @@
-/*  Controls one of the Traffic Lights 
- *Justin Wells
- *  Intro to Java
- * 2/3/2022
+/**
+ * determines the colors and controls each individual traffic light
+ * 
+ * @author juwell01
+ * @since 2022.03.14
+ * @version 1.0 
  */
-
 public class TrafficLight {
 	// traffic Light Controller class
 

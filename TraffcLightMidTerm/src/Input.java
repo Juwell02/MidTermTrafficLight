@@ -1,3 +1,10 @@
+/**
+ * deals with all user inputs
+ * 
+ * @author juwell01
+ * @since 2022.03.14
+ * @version 1.0 
+ */
 import java.util.Scanner;
 
 // deals with all inputs from the user

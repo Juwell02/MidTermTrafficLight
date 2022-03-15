@@ -1,5 +1,9 @@
-/* runs multiple lights together in sync
+/**
+ * runs the traffic lights together in sync
  * 
+ * @author juwell01
+ * @since 2022.03.14
+ * @version 1.0 
  */
 public class Intersection {
 
@@ -41,18 +45,18 @@ public class Intersection {
 		}
 		
 		else if (north.isYellow() == true) {
-			north.setGreenOn();
-			south.setGreenOn();
-			east.setRedOn();
-			west.setRedOn();	
-			
-		}
-
-		else if (north.isRed() == true) {
 			north.setRedOn();
 			south.setRedOn();
 			east.setGreenOn();
 			west.setGreenOn();
+			
+		}
+
+		else if (north.isRed() == true) {
+			north.setGreenOn();
+			south.setGreenOn();
+			east.setRedOn();
+			west.setRedOn();
 
 		}
 
